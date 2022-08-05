@@ -1,0 +1,33 @@
+{{define "error"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow">
+    <!--<link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">-->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{ .Title }}</title>
+
+    <link rel="stylesheet" href="../assets/css/argon-design.system.css">
+    <link rel="stylesheet" href="../assets/css/font-awesome.css">
+    {{ template "headerStylesheets" . }}
+    {{ template "headerJavascripts" . }}
+</head>
+<body class="mx-sm-0 mx-lg-9 my-lg-2 shadow">
+
+    {{ template "header" . }}
+
+    <div class="wrapper">
+        {{ template "content" . }}
+
+        {{ template "pagination" . }}
+        {{ template "footer" . }}
+    </div>
+
+    {{ template "footerStylesheets" . }}
+    {{ template "footerJavascripts" . }}
+</body>
+</html>
+{{end}}

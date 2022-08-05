@@ -1,0 +1,69 @@
+{{define "footer"}}
+    <div class="section py-5">
+        <div class="d-flex">
+            <a class="navbar-brand flex-fill" href="javascript:;">HN</a>
+
+            <nav class="nav nav-footer flex-column flex-fill">
+                <a class="nav-link disabled"><strong>Pages</strong></a>
+                <a class="nav-link" href="#">Active</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Link</a>
+            </nav>
+            
+            <nav class="nav nav-footer flex-column flex-fill">
+                <a class="nav-link disabled"><strong>Populars</strong></a>
+                <a class="nav-link" href="#">Active</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Link</a>
+            </nav>
+
+            <nav class="nav nav-footer flex-column flex-fill">
+                <a class="nav-link disabled"><strong>Contacts</strong></a>
+                <a class="nav-link" href="#">Active</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Link</a>
+            </nav>
+            
+            <div class="navbar-text ml-auto">
+                Make something people want.
+                <a href="index.html" class="btn btn-warning">Apply</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer p-0 py-2 border-top">
+        <div class="row align-items-center justify-content-md-between">
+            <div class="col-md-4">
+                <div class="copyright">&copy; 2022 <a href="index.html">{{ .SiteName }}</a> All rights reserved. <small>v0.1</small></div>
+            </div>
+            <div class="col-md-8">
+                <ul class="nav nav-footer justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-icon" href="javascript:;">
+                            <i class="fa fa-facebook-square"></i>
+                            <span class="nav-link-inner--text d-lg-none">Share</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-icon" href="javascript:;">
+                            <i class="fa fa-twitter"></i>
+                            <span class="nav-link-inner--text d-lg-none">Tweet</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-icon" href="javascript:;">
+                            <i class="fa fa-pinterest"></i>
+                            <span class="nav-link-inner--text d-lg-none">Pin</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-icon" href="javascript:;">
+                            <i class="fa fa-instagram"></i>
+                            <span class="nav-link-inner--text d-lg-none">Instagram</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+{{end}}

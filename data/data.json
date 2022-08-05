@@ -1,0 +1,163 @@
+{
+    "Title": "Hacker News",
+    "SiteName": "Hacker News",
+    "Query": "Key",
+    "MainPages": [
+        {
+            "ID": "1",
+            "Title": "New",
+            "Slug": "page.html",
+            "Content": "",
+            "Updated": 1657142592
+        },
+        {
+            "ID": "2",
+            "Title": "Past",
+            "Slug": "page.html",
+            "Content": "",
+            "Updated": 1657142592
+        },
+        {
+            "ID": "3",
+            "Title": "Comments",
+            "Slug": "page.html",
+            "Content": "",
+            "Updated": 1657142592
+        },
+        {
+            "ID": "4",
+            "Title": "Ask",
+            "Slug": "page.html",
+            "Content": "",
+            "Updated": 1657142592
+        },
+        {
+            "ID": "5",
+            "Title": "Show",
+            "Slug": "page.html",
+            "Content": "",
+            "Updated": 1657142592
+        },
+        {
+            "ID": "6",
+            "Title": "Jobs",
+            "Slug": "page.html",
+            "Content": "",
+            "Updated": 1657142592
+        },
+        {
+            "ID": "7",
+            "Title": "Submit",
+            "Slug": "page.html",
+            "Content": "",
+            "Updated": 1657142592
+        }
+    ],
+    "CurrentMainPage": "page.html",
+    "Pages": [
+        {
+            "ID": "8",
+            "Title": "Guidelines",
+            "Slug": "page.html",
+            "Content": "<p>People often ask us what happens at Y Combinator. Here is an overview of what happens during the YC program and the benefits you get as a YC founder.</p><p>The overall goal of YC is to help startups really take off. They arrive at YC at all different stages. Some haven’t even started working yet, and others have been launched for a year or more. But whatever stage a startup is at when they arrive, our goal is to help them to be in dramatically better shape 3 months later.</p><p>For most startups, better shape translates into two things: to have a better product with more users, and to have more options for raising money.</p><p>Startups at all stages benefit from the intensity of YC. That’s probably the best word to describe the atmosphere. For 3 months, it’s all startup, all the time. Everyone around you—us, the other founders in your batch, the alumni, the speakers, the investors—wants to help your startup succeed. In that atmosphere it’s hard not to be highly motivated. And that kind of extraordinary motivation is what one needs to do something as difficult as starting a startup.</p>",
+            "Updated": 1657142592
+        },
+        {
+            "ID": "9",
+            "Title": "FAQ",
+            "Slug": "page.html",
+            "Content": "",
+            "Updated": 1657142592
+        },
+        {
+            "ID": "10",
+            "Title": "Lists",
+            "Slug": "page.html",
+            "Content": "",
+            "Updated": 1657142592
+        },
+        {
+            "ID": "11",
+            "Title": "API",
+            "Slug": "page.html",
+            "Content": "",
+            "Updated": 1657142592
+        },
+        {
+            "ID": "12",
+            "Title": "Security",
+            "Slug": "page.html",
+            "Content": "",
+            "Updated": 1657142592
+        },
+        {
+            "ID": "13",
+            "Title": "Legal",
+            "Slug": "page.html",
+            "Content": "",
+            "Updated": 1657142592
+        },
+        {
+            "ID": "14",
+            "Title": "Apply to YC",
+            "Slug": "page.html",
+            "Content": "",
+            "Updated": 1657142592
+        },
+        {
+            "ID": "15",
+            "Title": "Contact",
+            "Slug": "page.html",
+            "Content": "",
+            "Updated": 1657142592
+        }
+    ],
+    "Pagination": {
+        "Total": 10,
+        "Current": 4,
+        "Pages": [
+            4,5,6,7
+        ]
+    },
+    "Posts": [
+        {
+            "ID": "1",
+            "Title": "Pen and paper exercises in machine learning",
+            "Slug": "single.html",
+            "LastIndex": 5,
+            "CurrentIndex": 2,
+            "Score": 100,
+            "Url": "https://github.com/uretgec/hacker-news-theme",
+            "Uri": "github.com/uretgec/hacker-news-theme",
+            "Author": {
+                "Username": "uretgec",
+                "Url": "https://github.com/uretgec"
+            },
+            "Updated": 1657145592
+        }
+    ],
+    "Comments": [
+        {
+            "ID": "1",
+            "Content": "As a rule of thumb, it is a good idea to support smaller and indie companies than mega corporations, IMHO - even if those mega corporations aren't doing anything that is ethically dubious. That is doubtful, as it is likely not possible to become that big without trampling on some toes or bending some rules.",
+            "LastIndex": 5,
+            "CurrentIndex": 2,
+            "User": {
+                "Username": "akudha",
+                "Url": "https://github.com/akudha"
+            },
+            "Updated": 1657142592
+        },
+        {
+            "ID": "2",
+            "Content": "Why support Github when there is st.ht? Why support Starbucks when you can support a mom &amp; pop coffee shop? Why buy books from Amazon when you can buy from a Indie book store? Granted, not everyone has the patience, time and money to vote with wallet, but we can try wherever possible. I hope more people ditch Github",
+            "LastIndex": 3,
+            "CurrentIndex": 4,
+            "User": {
+                "Username": "akudha",
+                "Url": "https://github.com/akudha"
+            },
+            "Updated": 1657145292
+        }
+    ]
+}
