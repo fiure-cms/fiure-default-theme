@@ -1,6 +1,7 @@
 package test
 
 import (
+	"fmt"
 	"html/template"
 	"log"
 	"os"
@@ -10,13 +11,21 @@ import (
 	"github.com/fiure-cms/fiure-default-theme/data"
 )
 
+var distFolder = "dist"
+var templatesFolder = "templates"
+var layoutsFolder = "layouts"
+var partialsFolder = "partials"
+
 func Test404Template(t *testing.T) {
+
+	layout := "error"
+	filename := "404"
 
 	// Get MyData
 	md := getMyData()
 
 	// Get MyFile
-	f, err := os.Create("../dist/404.html")
+	f, err := createFile(filename)
 	if err != nil {
 		log.Fatalf("file create: %s", err)
 
@@ -26,8 +35,8 @@ func Test404Template(t *testing.T) {
 	defer f.Close()
 
 	// Render Template
-	tmpl := template.Must(template.New("404.html").Funcs(getMyFuncs()).ParseFiles(getMyFileList("../templates/layouts/error.tmpl", "../templates/404.tmpl")...))
-	err = tmpl.ExecuteTemplate(f, "error", md)
+	tmpl := template.Must(template.New(filename).Funcs(getMyFuncs()).ParseFiles(getMyFileList(layout, fmt.Sprintf("../%s/%s.tmpl", templatesFolder, filename))...))
+	err = tmpl.ExecuteTemplate(f, layout, md)
 	if err != nil {
 		log.Fatalf("template execution: %s", err)
 
@@ -37,11 +46,14 @@ func Test404Template(t *testing.T) {
 
 func TestIndexTemplate(t *testing.T) {
 
+	layout := "base"
+	filename := "index"
+
 	// Get MyData
 	md := getMyData()
 
 	// Get MyFile
-	f, err := os.Create("../dist/index.html")
+	f, err := createFile(filename)
 	if err != nil {
 		log.Fatalf("file create: %s", err)
 
@@ -51,23 +63,8 @@ func TestIndexTemplate(t *testing.T) {
 	defer f.Close()
 
 	// Render Template
-	tmpl := template.Must(template.New("index.html").Funcs(getMyFuncs()).ParseFiles(getMyFileList("", "../templates/index.tmpl")...))
-	err = tmpl.ExecuteTemplate(f, "base", md)
-	if err != nil {
-		log.Fatalf("template execution: %s", err)
-
-		t.Errorf("Error: %v", err)
-	}
-}
-
-func TestLoginTemplate(t *testing.T) {
-
-	// Get MyData
-	md := getMyData()
-
-	// Render Template
-	tmpl := template.Must(template.New("login.html").Funcs(getMyFuncs()).ParseFiles(getMyFileList("", "../templates/login.tmpl")...))
-	err := tmpl.ExecuteTemplate(os.Stdout, "base", md)
+	tmpl := template.Must(template.New(filename).Funcs(getMyFuncs()).ParseFiles(getMyFileList(layout, fmt.Sprintf("../%s/%s.tmpl", templatesFolder, filename))...))
+	err = tmpl.ExecuteTemplate(f, layout, md)
 	if err != nil {
 		log.Fatalf("template execution: %s", err)
 
@@ -77,12 +74,25 @@ func TestLoginTemplate(t *testing.T) {
 
 func TestPageTemplate(t *testing.T) {
 
+	layout := "base"
+	filename := "page"
+
 	// Get MyData
 	md := getMyData()
 
+	// Get MyFile
+	f, err := createFile(filename)
+	if err != nil {
+		log.Fatalf("file create: %s", err)
+
+		t.Errorf("Error: %v", err)
+	}
+
+	defer f.Close()
+
 	// Render Template
-	tmpl := template.Must(template.New("page.html").Funcs(getMyFuncs()).ParseFiles(getMyFileList("", "../templates/page.tmpl")...))
-	err := tmpl.ExecuteTemplate(os.Stdout, "base", md)
+	tmpl := template.Must(template.New(filename).Funcs(getMyFuncs()).ParseFiles(getMyFileList(layout, fmt.Sprintf("../%s/%s.tmpl", templatesFolder, filename))...))
+	err = tmpl.ExecuteTemplate(f, layout, md)
 	if err != nil {
 		log.Fatalf("template execution: %s", err)
 
@@ -92,12 +102,81 @@ func TestPageTemplate(t *testing.T) {
 
 func TestSearchTemplate(t *testing.T) {
 
+	layout := "base"
+	filename := "search"
+
 	// Get MyData
 	md := getMyData()
 
+	// Get MyFile
+	f, err := createFile(filename)
+	if err != nil {
+		log.Fatalf("file create: %s", err)
+
+		t.Errorf("Error: %v", err)
+	}
+
+	defer f.Close()
+
 	// Render Template
-	tmpl := template.Must(template.New("search.html").Funcs(getMyFuncs()).ParseFiles(getMyFileList("", "../templates/search.tmpl")...))
-	err := tmpl.ExecuteTemplate(os.Stdout, "base", md)
+	tmpl := template.Must(template.New(filename).Funcs(getMyFuncs()).ParseFiles(getMyFileList(layout, fmt.Sprintf("../%s/%s.tmpl", templatesFolder, filename))...))
+	err = tmpl.ExecuteTemplate(f, layout, md)
+	if err != nil {
+		log.Fatalf("template execution: %s", err)
+
+		t.Errorf("Error: %v", err)
+	}
+}
+
+func TestTermTemplate(t *testing.T) {
+
+	layout := "base"
+	filename := "term"
+
+	// Get MyData
+	md := getMyData()
+
+	// Get MyFile
+	f, err := createFile(filename)
+	if err != nil {
+		log.Fatalf("file create: %s", err)
+
+		t.Errorf("Error: %v", err)
+	}
+
+	defer f.Close()
+
+	// Render Template
+	tmpl := template.Must(template.New(filename).Funcs(getMyFuncs()).ParseFiles(getMyFileList(layout, fmt.Sprintf("../%s/%s.tmpl", templatesFolder, filename))...))
+	err = tmpl.ExecuteTemplate(f, layout, md)
+	if err != nil {
+		log.Fatalf("template execution: %s", err)
+
+		t.Errorf("Error: %v", err)
+	}
+}
+
+func TestAuthorTemplate(t *testing.T) {
+
+	layout := "base"
+	filename := "author"
+
+	// Get MyData
+	md := getMyData()
+
+	// Get MyFile
+	f, err := createFile(filename)
+	if err != nil {
+		log.Fatalf("file create: %s", err)
+
+		t.Errorf("Error: %v", err)
+	}
+
+	defer f.Close()
+
+	// Render Template
+	tmpl := template.Must(template.New(filename).Funcs(getMyFuncs()).ParseFiles(getMyFileList(layout, fmt.Sprintf("../%s/%s.tmpl", templatesFolder, filename))...))
+	err = tmpl.ExecuteTemplate(f, layout, md)
 	if err != nil {
 		log.Fatalf("template execution: %s", err)
 
@@ -107,12 +186,25 @@ func TestSearchTemplate(t *testing.T) {
 
 func TestSingleTemplate(t *testing.T) {
 
+	layout := "base"
+	filename := "single"
+
 	// Get MyData
 	md := getMyData()
 
+	// Get MyFile
+	f, err := createFile(filename)
+	if err != nil {
+		log.Fatalf("file create: %s", err)
+
+		t.Errorf("Error: %v", err)
+	}
+
+	defer f.Close()
+
 	// Render Template
-	tmpl := template.Must(template.New("single.html").Funcs(getMyFuncs()).ParseFiles(getMyFileList("", "../templates/single.tmpl")...))
-	err := tmpl.ExecuteTemplate(os.Stdout, "base", md)
+	tmpl := template.Must(template.New(filename).Funcs(getMyFuncs()).ParseFiles(getMyFileList(layout, fmt.Sprintf("../%s/%s.tmpl", templatesFolder, filename))...))
+	err = tmpl.ExecuteTemplate(f, layout, md)
 	if err != nil {
 		log.Fatalf("template execution: %s", err)
 
@@ -136,19 +228,20 @@ func getMyFuncs() template.FuncMap {
 }
 
 func getMyFileList(layout string, files ...string) []string {
-	if layout == "" {
-		layout = "../templates/layouts/base.tmpl"
-	}
 
 	requiredFiles := []string{
-		layout,
-		"../templates/partials/header.tmpl",
-		"../templates/partials/pagination.tmpl",
-		"../templates/partials/sidebar.tmpl",
-		"../templates/partials/footer.tmpl",
+		fmt.Sprintf("../%s/%s/%s.tmpl", templatesFolder, layoutsFolder, layout),
+		fmt.Sprintf("../%s/%s/%s.tmpl", templatesFolder, partialsFolder, "header"),
+		fmt.Sprintf("../%s/%s/%s.tmpl", templatesFolder, partialsFolder, "pagination"),
+		fmt.Sprintf("../%s/%s/%s.tmpl", templatesFolder, partialsFolder, "sidebar"),
+		fmt.Sprintf("../%s/%s/%s.tmpl", templatesFolder, partialsFolder, "footer"),
 	}
 
 	return append(requiredFiles, files...)
+}
+
+func createFile(filename string) (*os.File, error) {
+	return os.Create(fmt.Sprintf("../%s/%s.html", distFolder, filename))
 }
 
 func convertUpdateTime(updated int64) time.Time {

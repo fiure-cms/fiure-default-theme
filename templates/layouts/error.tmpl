@@ -10,20 +10,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{{ .Title }}</title>
 
-    <link rel="stylesheet" href="../assets/css/argon-design.system.css">
+    <link rel="stylesheet" href="../assets/css/argon-design-system.css">
     <link rel="stylesheet" href="../assets/css/font-awesome.css">
     {{ template "headerStylesheets" . }}
     {{ template "headerJavascripts" . }}
 </head>
-<body class="mx-sm-0 mx-lg-9 my-lg-2 shadow">
-
-    {{ template "header" . }}
-
+<body>
     <div class="wrapper">
-        {{ template "content" . }}
+        <div class="container">
+            {{ template "header" . }}
 
-        {{ template "pagination" . }}
-        {{ template "footer" . }}
+            {{ template "content" . }}
+
+            {{ template "footer" . }}
+        </div>
     </div>
 
     {{ template "footerStylesheets" . }}

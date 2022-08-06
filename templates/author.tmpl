@@ -1,0 +1,43 @@
+{{define "content"}}
+
+    <div class="section p-0 pt-5 m-0">
+        <div class="row">
+            <div class="col-md-8">
+                <h5>Author Posts: My</h5>
+                <div class="card card-plain border-top">
+                    <div class="card-body p-0 py-3">
+                        <h5 class="card-title mb-2"><a href="single.html">Card title</a></h5>
+                        <small class="card-subtitle text-muted">By <a href="author.html">MyAuth</a> August 5, Friday 2022</small>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text">
+                            <a href="single.html" class="text-warning">Read More <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card card-plain border-top">
+                    <div class="card-body p-0 py-3">
+                        <h5 class="card-title mb-2"><a href="single.html">Card title</a></h5>
+                        <small class="card-subtitle text-muted">By <a href="author.html">MyAuth</a> August 5, Friday 2022</small>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text">
+                            <a href="single.html" class="text-warning">Read More <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
+                        </p>
+                    </div>
+                </div>
+
+                {{ template "pagination" . }}
+            </div>
+
+            <div class="col-md-4">
+                {{ template "sidebar" . }}
+            </div>
+        </div>
+    </div>
+{{end}}
+
+{{define "headerStylesheets"}}{{end}}
+{{define "headerJavascripts"}}{{end}}
+
+{{define "footerStylesheets"}}{{end}}
+{{define "footerJavascripts"}}{{end}}
